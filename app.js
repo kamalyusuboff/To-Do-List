@@ -16,5 +16,9 @@ let addItem = (inputBox) => {
         this.classList.toggle("done");
     });
 
+    listItem.querySelector("i").addEventListener("click", function(){
+        listItem.remove();
+    });
+
     list.appendChild(listItem);
 }

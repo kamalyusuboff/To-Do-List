@@ -9,7 +9,7 @@ body{
     align-items: center;
     min-height: 100vh;
     overflow-y: hidden;
-    background-color: rgb(53, 53, 54);
+    background-color: rgb(50, 54, 64);
 }
 main{
     width: 450px;
@@ -40,4 +40,85 @@ main input#searchbar {
     font-size: 20px;
     font-family: Arial, Helvetica, sans-serif;
     margin-bottom: 35px;
+}
+
+#list {
+    width: 85%;
+    list-style-type: none;
+}
+
+#list li{
+    box-shadow: 5px 5px 7px rgba(0,0,0,0.25), inset 2px 2px 5px
+    rgba(0,0,0,0.5), inset -3px -3px 5px rgba(0,0,0,0.5);
+    width: 90%;
+    min-height: 45px;
+    background-color: rgb(30, 131, 243);
+    border-radius: 22.5px;
+    margin-bottom: 15px;
+    position: relative;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    padding-left: 46px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #fff;
+    user-select: none;
+}
+
+#list li i{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    right: -40px;
+    top: 2;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    background: #ff2c74;
+    box-shadow: 5px 5px 7px rgba(0,0,0,0.25), inset 2px 2px 5px
+    rgba(255,255,255,0.5), inset -3px -3px 5px rgba(0,0,0,0.5);
+
+}
+
+#list li i::before{
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 2px;
+    background: #fff;
+    transform: rotate(45deg);
+}
+#list li i::after{
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 2px;
+    background: #fff;
+    transform: rotate(-45deg);
+}
+
+#list li::before{
+    content: '';
+    position: absolute;
+    left: 8px;
+    width: 30px;
+    height: 30px;
+    background: #2f363e;
+    border-radius: 50%;
+}
+
+#list li.done{
+    background: #607d8b;
+    text-decoration: line-through;
+}
+#list li.done::after{
+    content: '';
+    position: absolute;
+    left: 16px;
+    width: 12px;
+    height: 6px;
+    border-left: 2px solid #fff;
+    border-bottom: 2px solid #fff;
+    transform: rotate(-45deg);
 }
